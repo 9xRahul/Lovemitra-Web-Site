@@ -16,11 +16,11 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
-    { name: 'Features', href: '/#features' },
-    { name: 'Safety', href: '/#safety' },
-    { name: 'How it Works', href: '/#how-it-works' },
-    { name: 'Contact', href: '/#contact' },
+    { name: 'Home', href: '#/' },
+    { name: 'Features', href: '#features' },
+    { name: 'Safety', href: '#safety' },
+    { name: 'How it Works', href: '#how-it-works' },
+    { name: 'Contact', href: '#contact' },
   ];
 
   if (new URLSearchParams(window.location.search).get('minimal') === 'true') {
