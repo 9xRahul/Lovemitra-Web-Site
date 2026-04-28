@@ -77,27 +77,40 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            className="md:hidden fixed inset-0 z-40 bg-white pt-24 px-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="md:hidden fixed inset-0 z-50 bg-white flex flex-col"
           >
-            <div className="flex flex-col space-y-4">
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-between px-6 py-6 border-b border-gray-50">
+              <Link to="/" onClick={() => setIsOpen(false)}>
+                <img src="logo-full.png" alt="LoveMitra Logo" className="h-12 w-auto object-contain" />
+              </Link>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="p-2 text-gray-700 hover:text-primary-start transition-colors"
+              >
+                <X size={32} />
+              </button>
+            </div>
+
+            <div className="flex-grow flex flex-col justify-center px-6 space-y-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
                   to={link.href}
-                  className="text-2xl font-bold text-gray-900 py-2 border-b border-gray-50"
+                  className="text-4xl font-bold text-gray-900"
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <div className="pt-8 flex flex-col gap-4">
-                <button className="w-full py-4 text-primary-start font-bold border-2 border-primary-start rounded-2xl">
+              <div className="pt-12 flex flex-col gap-4">
+                <button className="w-full py-5 text-primary-start font-bold border-2 border-primary-start rounded-2xl text-xl">
                   Login
                 </button>
-                <button className="w-full gradient-button py-4 text-white font-bold rounded-2xl">
+                <button className="w-full gradient-button py-5 text-white font-bold rounded-2xl text-xl">
                   Download App
                 </button>
               </div>
