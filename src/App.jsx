@@ -7,7 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Lovemitra-Web-Site">
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
