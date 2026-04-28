@@ -29,9 +29,13 @@ const Card = ({ profile, onSwipe, index, total }) => {
     >
       <div className="relative flex-grow rounded-2xl overflow-hidden mb-4 pointer-events-none">
         <img src={profile.image} alt={profile.name} className="w-full h-full object-cover" />
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent">
-          <p className="text-white font-bold text-lg">{profile.name}, {profile.age}</p>
-          <p className="text-white/80 text-xs">{profile.bio} • {profile.distance}</p>
+        <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent">
+          <p className="text-white font-bold text-2xl mb-1">{profile.name}, {profile.age}</p>
+          <div className="flex items-center gap-2 text-white/90 text-sm">
+            <span className="bg-white/20 px-2 py-0.5 rounded-md backdrop-blur-sm">{profile.bio}</span>
+            <span>•</span>
+            <span>{profile.distance}</span>
+          </div>
         </div>
       </div>
       <div className="flex justify-around items-center pb-2">
@@ -105,11 +109,11 @@ const AppPreview = () => {
             </div>
           </motion.div>
 
-          <div className="relative h-[500px] flex items-center justify-center">
+          <div className="relative h-[550px] sm:h-[600px] flex items-center justify-center mt-8 lg:mt-0">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-brand-gradient/5 rounded-full blur-3xl scale-150" />
             
-            <div className="relative w-full flex justify-center">
+            <div className="relative w-full flex justify-center h-full items-center">
               <AnimatePresence>
                 {profiles.map((profile, i) => (
                   <Card 
