@@ -43,13 +43,13 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="text-gray-700 hover:text-primary-start font-medium transition-colors duration-300"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <div className="flex items-center space-x-4">
               <button className="text-primary-start font-semibold hover:opacity-80 transition-opacity px-4">
