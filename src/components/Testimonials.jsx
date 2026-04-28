@@ -57,8 +57,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Success <span className="gradient-text">Stories</span></h2>
           <p className="text-xl text-gray-500">Join the thousands who found their perfect partner on LoveMitra.</p>

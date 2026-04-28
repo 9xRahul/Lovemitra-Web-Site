@@ -52,8 +52,8 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="how-it-works" className="py-24 bg-pastel-orange/20 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="how-it-works" className="py-20 sm:py-24 bg-pastel-orange/20 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">How <span className="gradient-text">LoveMitra</span> Works</h2>
           <p className="text-xl text-gray-500">Your journey to finding love is just 4 steps away.</p>

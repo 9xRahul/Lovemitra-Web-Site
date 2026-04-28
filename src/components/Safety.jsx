@@ -16,8 +16,8 @@ const SafetyItem = ({ icon: Icon, title, description }) => (
 
 const Safety = () => {
   return (
-    <section id="safety" className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="safety" className="py-20 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="bg-brand-gradient rounded-[3rem] overflow-hidden shadow-2xl relative">
           {/* Background Patterns */}
           <div className="absolute top-0 right-0 w-1/2 h-full bg-white/5 skew-x-12 translate-x-20" />

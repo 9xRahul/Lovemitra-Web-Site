@@ -9,32 +9,33 @@ const Hero = () => {
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary-start/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary-end/10 rounded-full blur-3xl" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center lg:text-left"
           >
             <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-sm mb-6 border border-primary-start/10">
-              <Sparkles className="text-primary-start" size={18} />
-              <span className="text-sm font-semibold text-gray-700">The #1 Choice for Real Connections</span>
+              <Sparkles className="text-primary-start" size={16} />
+              <span className="text-xs sm:text-sm font-semibold text-gray-700">The #1 Choice for Real Connections</span>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 sm:mb-6">
-              Find Real <span className="gradient-text">Connections</span>, Not Just Matches
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-6">
+              Find Real <br className="hidden sm:block" /> <span className="gradient-text">Connections</span>, <br className="hidden sm:block" /> Not Just Matches
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 max-w-lg leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               LoveMitra uses smart compatibility algorithms to help you find someone who truly understands you. Join millions finding love today.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="gradient-button flex items-center justify-center gap-2 group">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+              <button className="gradient-button w-full sm:w-auto py-5 px-10 text-lg flex items-center justify-center gap-2 group shadow-xl">
                 <Heart className="group-hover:fill-white transition-all" size={20} />
                 Get Started Now
               </button>
-              <button className="outline-button flex items-center justify-center gap-2">
+              <button className="outline-button w-full sm:w-auto py-5 px-10 text-lg flex items-center justify-center gap-2 border-2">
                 <Smartphone size={20} />
                 Download App
               </button>
