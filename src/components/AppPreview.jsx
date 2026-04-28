@@ -36,70 +36,67 @@ const AppPreview = () => {
             </div>
           </motion.div>
 
-          <div className="relative flex justify-center lg:justify-end">
+          <div className="relative mt-12 lg:mt-0 flex justify-center lg:justify-end overflow-hidden sm:overflow-visible py-10">
             {/* Visual background element */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-gradient/5 rounded-full blur-3xl" />
             
-            <div className="relative flex gap-4 md:gap-8 transform rotate-3 sm:rotate-6 lg:rotate-12 translate-x-4 sm:translate-x-10">
-              {/* Card 1 */}
+            <div className="relative flex items-center justify-center gap-4 sm:gap-8 transform lg:rotate-12 lg:translate-x-10 scale-90 sm:scale-100">
+              {/* Card 1 - Profile */}
               <motion.div 
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="w-64 h-[450px] bg-white rounded-[2rem] shadow-2xl p-4 border border-gray-100 flex flex-col"
+                className="w-44 sm:w-64 h-[320px] sm:h-[450px] bg-white rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl p-3 sm:p-4 border border-gray-100 flex flex-col z-20"
               >
-                <div className="relative flex-grow rounded-2xl overflow-hidden mb-4 group">
+                <div className="relative flex-grow rounded-xl sm:rounded-2xl overflow-hidden mb-3 sm:mb-4 group">
                   <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80" alt="profile" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/60 to-transparent">
-                    <p className="text-white font-bold">Maya, 22</p>
-                    <p className="text-white/80 text-xs">Architect • 2km away</p>
+                  <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 bg-gradient-to-t from-black/60 to-transparent">
+                    <p className="text-white font-bold text-sm sm:text-base">Maya, 22</p>
+                    <p className="text-white/80 text-[10px] sm:text-xs">Architect • 2km away</p>
                   </div>
                 </div>
-                <div className="flex justify-between px-2 pb-2">
-                  <div className="w-12 h-12 rounded-full border-2 border-gray-100 flex items-center justify-center text-gray-400 hover:text-red-500 hover:border-red-100 transition-colors cursor-pointer">
-                    <Star size={24} />
+                <div className="flex justify-between px-1 sm:px-2 pb-1 sm:pb-2">
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full border-2 border-gray-100 flex items-center justify-center text-gray-400">
+                    <Star size={16} className="sm:w-6 sm:h-6" />
                   </div>
-                  <div className="w-12 h-12 rounded-full bg-brand-gradient flex items-center justify-center text-white shadow-lg hover:scale-110 transition-transform cursor-pointer">
-                    <Heart size={24} fill="white" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-full bg-brand-gradient flex items-center justify-center text-white shadow-lg">
+                    <Heart size={16} className="sm:w-6 sm:h-6" fill="white" />
                   </div>
                 </div>
               </motion.div>
 
-              {/* Card 2 */}
+              {/* Card 2 - Chat (Hidden on very small screens or scaled) */}
               <motion.div 
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-48 sm:w-64 h-[350px] sm:h-[450px] bg-white rounded-[2rem] shadow-2xl p-4 border border-gray-100 flex flex-col translate-y-8 sm:translate-y-12"
+                className="w-44 sm:w-64 h-[320px] sm:h-[450px] bg-white rounded-[1.5rem] sm:rounded-[2rem] shadow-2xl p-3 sm:p-4 border border-gray-100 flex flex-col translate-y-6 sm:translate-y-12 z-10 hidden xs:flex"
               >
-                <div className="flex items-center gap-3 mb-6 p-2">
-                   <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">
+                <div className="flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6 p-1 sm:p-2">
+                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-gray-200 overflow-hidden">
                      <img src="https://i.pravatar.cc/100?u=alex" alt="avatar" />
                    </div>
                    <div>
-                     <p className="font-bold text-sm">Alex</p>
-                     <p className="text-[10px] text-green-500 font-semibold">Online Now</p>
+                     <p className="font-bold text-xs sm:text-sm">Alex</p>
+                     <p className="text-[9px] sm:text-[10px] text-green-500 font-semibold">Online Now</p>
                    </div>
                 </div>
-                <div className="space-y-3 flex-grow overflow-hidden">
-                  <div className="bg-gray-100 p-3 rounded-2xl rounded-tl-none mr-8">
-                    <p className="text-xs">Hey Maya! Loved your art pieces. How long have you been painting? 🎨</p>
+                <div className="space-y-2 sm:space-y-3 flex-grow overflow-hidden">
+                  <div className="bg-gray-100 p-2 sm:p-3 rounded-xl sm:rounded-2xl rounded-tl-none mr-4 sm:mr-8">
+                    <p className="text-[10px] sm:text-xs">Hey Maya! Loved your art pieces. How long have you been painting? 🎨</p>
                   </div>
-                  <div className="bg-brand-gradient text-white p-3 rounded-2xl rounded-tr-none ml-8">
-                    <p className="text-xs">Hi Alex! Thank you so much. I've been at it for 5 years now! 👋</p>
-                  </div>
-                  <div className="bg-gray-100 p-3 rounded-2xl rounded-tl-none mr-8">
-                    <p className="text-xs">That's amazing! We should definitely talk more about it over coffee sometime? ☕</p>
+                  <div className="bg-brand-gradient text-white p-2 sm:p-3 rounded-xl sm:rounded-2xl rounded-tr-none ml-4 sm:mr-0 ml-4 sm:ml-8">
+                    <p className="text-[10px] sm:text-xs">Hi Alex! Thank you so much. 👋</p>
                   </div>
                 </div>
-                <div className="mt-4 flex gap-2">
-                  <div className="flex-grow h-10 bg-gray-50 rounded-full border border-gray-100 flex items-center px-4 text-gray-300 text-xs">
+                <div className="mt-2 sm:mt-4 flex gap-2">
+                  <div className="flex-grow h-8 sm:h-10 bg-gray-50 rounded-full border border-gray-100 flex items-center px-3 sm:px-4 text-gray-300 text-[10px] sm:text-xs">
                     Type a message...
                   </div>
-                  <div className="w-10 h-10 rounded-full bg-brand-gradient flex items-center justify-center text-white">
-                    <Heart size={16} fill="white" />
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-gradient flex items-center justify-center text-white">
+                    <Heart size={14} className="sm:w-4 sm:h-4" fill="white" />
                   </div>
                 </div>
               </motion.div>
