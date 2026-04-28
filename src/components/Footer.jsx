@@ -35,7 +35,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-12 mb-16">
           <div className="col-span-2">
             <Link to="/" className="flex items-center gap-2 mb-6 group w-fit">
-              <img src="/logo-full.png" alt="LoveMitra Logo" className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
+              <img src="logo-full.png" alt="LoveMitra Logo" className="h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105" />
             </Link>
             <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">
               Making real connections easier and safer for everyone. Join our community of over 10 million people finding meaningful relationships.

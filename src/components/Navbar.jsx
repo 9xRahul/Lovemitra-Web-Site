@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center gap-2 group">
               <img 
-                src="/logo-full.png" 
+                src="logo-full.png" 
                 alt="LoveMitra Logo" 
                 className={`${scrolled ? 'h-12' : 'h-16'} w-auto object-contain transition-all duration-300 group-hover:scale-105`} 
               />
