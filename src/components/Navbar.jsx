@@ -93,44 +93,45 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: '100%' }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: '100%' }}
-            transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="md:hidden fixed inset-0 z-[100] bg-white flex flex-col"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'tween', duration: 0.3 }}
+            className="md:hidden fixed inset-0 z-[9999] bg-white flex flex-col h-screen w-screen overflow-hidden"
+            style={{ backgroundColor: '#ffffff' }}
           >
             {/* Mobile Menu Header */}
-            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-white">
+            <div className="flex items-center justify-between px-6 py-5 border-b border-gray-100 bg-white sticky top-0 z-10">
               <Link to="/" onClick={() => setIsOpen(false)}>
                 <img src="logo-full.png" alt="LoveMitra Logo" className="h-10 w-auto object-contain" />
               </Link>
               <button
                 onClick={() => setIsOpen(false)}
-                className="p-2 text-gray-900 hover:text-primary-start transition-colors"
+                className="p-2 text-gray-900"
               >
                 <X size={32} />
               </button>
             </div>
 
-            <div className="flex-grow overflow-y-auto px-8 py-6 bg-white">
-              <nav className="flex flex-col space-y-4">
+            <div className="flex-grow overflow-y-auto px-8 py-10 bg-white">
+              <div className="flex flex-col space-y-6">
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
                     to={link.href}
-                    className="text-2xl font-bold text-gray-900 hover:text-primary-start transition-colors"
+                    className="text-4xl font-bold text-gray-900 border-b border-gray-50 pb-4"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}
                   </Link>
                 ))}
-              </nav>
+              </div>
               
-              <div className="mt-8 flex flex-col gap-3 border-t border-gray-100 pt-8">
-                <button className="w-full py-4 text-primary-start font-bold border-2 border-primary-start rounded-xl text-base">
+              <div className="mt-12 flex flex-col gap-4">
+                <button className="w-full py-5 text-primary-start font-bold border-2 border-primary-start rounded-2xl text-xl">
                   Login
                 </button>
-                <button className="w-full gradient-button py-4 text-white font-bold rounded-xl text-base shadow-lg">
+                <button className="w-full gradient-button py-5 text-white font-bold rounded-2xl text-xl shadow-xl">
                   Download App
                 </button>
               </div>
