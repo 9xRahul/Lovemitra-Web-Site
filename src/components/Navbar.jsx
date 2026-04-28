@@ -36,7 +36,7 @@ const Navbar = () => {
               <img 
                 src="logo-full.png" 
                 alt="LoveMitra Logo" 
-                className={`${scrolled ? 'h-12' : 'h-16'} w-auto object-contain transition-all duration-300 group-hover:scale-105`} 
+                className={`${scrolled ? 'h-10 sm:h-12' : 'h-12 sm:h-16'} w-auto object-contain transition-all duration-300 group-hover:scale-105`} 
               />
             </Link>
           </div>

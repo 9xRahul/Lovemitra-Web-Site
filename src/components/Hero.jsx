@@ -4,7 +4,7 @@ import { Smartphone, Heart, Sparkles } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-pastel-pink/30">
+    <section id="home" className="relative min-h-screen flex items-center pt-32 sm:pt-40 overflow-hidden bg-pastel-pink/30">
       {/* Decorative Blobs */}
       <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary-start/10 rounded-full blur-3xl animate-pulse" />
       <div className="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary-end/10 rounded-full blur-3xl" />
