@@ -57,8 +57,8 @@ const Safety = () => {
               viewport={{ once: true }}
               className="text-white"
             >
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">Your Safety is Our <span className="underline decoration-white/30">Priority</span></h2>
-              <p className="text-white/80 text-xl mb-12">We use advanced technology and manual review to ensure your dating experience is safe and secure.</p>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8">Your Safety is Our <span className="underline decoration-white/30">Priority</span></h2>
+              <p className="text-white/80 text-lg sm:text-xl mb-8 sm:mb-12">We use advanced technology and manual review to ensure your dating experience is safe and secure.</p>
               
               <div className="grid gap-8">
                 <SafetyItem 

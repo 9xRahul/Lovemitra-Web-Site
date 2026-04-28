@@ -40,7 +40,7 @@ const AppPreview = () => {
             {/* Visual background element */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-brand-gradient/5 rounded-full blur-3xl" />
             
-            <div className="relative flex gap-4 md:gap-8 transform rotate-6 lg:rotate-12 translate-x-10">
+            <div className="relative flex gap-4 md:gap-8 transform rotate-3 sm:rotate-6 lg:rotate-12 translate-x-4 sm:translate-x-10">
               {/* Card 1 */}
               <motion.div 
                 initial={{ opacity: 0, y: 100 }}
@@ -72,7 +72,7 @@ const AppPreview = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="w-64 h-[450px] bg-white rounded-[2rem] shadow-2xl p-4 border border-gray-100 flex flex-col translate-y-12"
+                className="w-48 sm:w-64 h-[350px] sm:h-[450px] bg-white rounded-[2rem] shadow-2xl p-4 border border-gray-100 flex flex-col translate-y-8 sm:translate-y-12"
               >
                 <div className="flex items-center gap-3 mb-6 p-2">
                    <div className="w-10 h-10 rounded-full bg-gray-200 overflow-hidden">

@@ -21,11 +21,11 @@ const Hero = () => {
               <span className="text-sm font-semibold text-gray-700">The #1 Choice for Real Connections</span>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 sm:mb-6">
               Find Real <span className="gradient-text">Connections</span>, Not Just Matches
             </h1>
             
-            <p className="text-xl text-gray-600 mb-10 max-w-lg leading-relaxed">
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-10 max-w-lg leading-relaxed">
               LoveMitra uses smart compatibility algorithms to help you find someone who truly understands you. Join millions finding love today.
             </p>
             

@@ -16,7 +16,7 @@ const CTA = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl md:text-6xl font-bold text-white mb-8">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold text-white mb-6 sm:mb-8">
               Ready to find your <br /> <span className="text-white/80 italic">Perfect Match?</span>
             </h2>
             <p className="text-white/90 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
