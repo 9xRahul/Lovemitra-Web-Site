@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
@@ -7,7 +7,7 @@ import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <Router basename="/Lovemitra-Web-Site">
+    <Router>
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
