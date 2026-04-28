@@ -8,10 +8,11 @@ import Safety from '../components/Safety';
 import AppPreview from '../components/AppPreview';
 import Testimonials from '../components/Testimonials';
 import CTA from '../components/CTA';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const Home = () => {
-  const { hash } = useLocation();
+  const { hash, pathname } = useLocation();
 
   useEffect(() => {
     if (hash) {
@@ -22,8 +23,10 @@ const Home = () => {
           element.scrollIntoView({ behavior: 'smooth' });
         }, 100);
       }
+    } else {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-  }, [hash]);
+  }, [hash, pathname]);
 
   return (
     <main className="w-full">
@@ -35,6 +38,7 @@ const Home = () => {
       <Safety />
       <Testimonials />
       <CTA />
+      <Contact />
       <Footer />
     </main>
   );
